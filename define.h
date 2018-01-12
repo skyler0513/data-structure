@@ -70,5 +70,13 @@ typedef struct
 {
     int length;
     char str[MAX];
-}String, PString;
+}String, *PString;
+
+//二叉树的节点
+typedef struct BinaryNode
+{
+    int data;
+    struct BinaryNode *lChild, *rChild;
+}BinaryNode, *PBinaryNode;
+
 #endif //DATA_STRUCTURE_DEFINE_H

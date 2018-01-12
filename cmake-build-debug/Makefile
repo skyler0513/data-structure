@@ -122,6 +122,33 @@ data_structure/fast:
 	$(MAKE) -f CMakeFiles\data_structure.dir\build.make CMakeFiles/data_structure.dir/build
 .PHONY : data_structure/fast
 
+BinaryTree.obj: BinaryTree.c.obj
+
+.PHONY : BinaryTree.obj
+
+# target to build an object file
+BinaryTree.c.obj:
+	$(MAKE) -f CMakeFiles\data_structure.dir\build.make CMakeFiles/data_structure.dir/BinaryTree.c.obj
+.PHONY : BinaryTree.c.obj
+
+BinaryTree.i: BinaryTree.c.i
+
+.PHONY : BinaryTree.i
+
+# target to preprocess a source file
+BinaryTree.c.i:
+	$(MAKE) -f CMakeFiles\data_structure.dir\build.make CMakeFiles/data_structure.dir/BinaryTree.c.i
+.PHONY : BinaryTree.c.i
+
+BinaryTree.s: BinaryTree.c.s
+
+.PHONY : BinaryTree.s
+
+# target to generate assembly for a file
+BinaryTree.c.s:
+	$(MAKE) -f CMakeFiles\data_structure.dir\build.make CMakeFiles/data_structure.dir/BinaryTree.c.s
+.PHONY : BinaryTree.c.s
+
 LinkList.obj: LinkList.c.obj
 
 .PHONY : LinkList.obj
@@ -320,6 +347,9 @@ help:
 	@echo ... data_structure
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... BinaryTree.obj
+	@echo ... BinaryTree.i
+	@echo ... BinaryTree.s
 	@echo ... LinkList.obj
 	@echo ... LinkList.i
 	@echo ... LinkList.s
