@@ -98,7 +98,7 @@ int KMP(PString str, PString match)
     else return 0;
 }
 
-int main()
+int test()
 {
     int position;
     String str, match;

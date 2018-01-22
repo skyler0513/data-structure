@@ -73,10 +73,10 @@ typedef struct
 }String, *PString;
 
 //二叉树的节点
-typedef struct BinaryNode
+typedef struct BinaryTreeNode
 {
     int data;
-    struct BinaryNode *lChild, *rChild;
+    struct BinaryTreeNode *lChild, *rChild;
 }BinaryNode, *PBinaryNode;
 
 #endif //DATA_STRUCTURE_DEFINE_H
