@@ -4,6 +4,9 @@
 CMakeFiles/data_structure.dir/BinaryTree.c.obj: ../BinaryTree.c
 CMakeFiles/data_structure.dir/BinaryTree.c.obj: ../define.h
 
+CMakeFiles/data_structure.dir/Graphic.c.obj: ../Graphic.c
+CMakeFiles/data_structure.dir/Graphic.c.obj: ../define.h
+
 CMakeFiles/data_structure.dir/LinkList.c.obj: ../LinkList.c
 CMakeFiles/data_structure.dir/LinkList.c.obj: ../define.h
 

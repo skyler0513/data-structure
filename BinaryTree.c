@@ -3,6 +3,17 @@
 #include <malloc.h>
 #include <string.h>
 #include "define.h"
+
+/*
+ |-------------------------------------------------------------------------------------------------
+ |二叉树的遍历，理解递归思想的好例子
+ |-------------------------------------------------------------------------------------------------
+ */
+/**
+ * 构建二叉树
+ * @param node
+ * @return
+ */
 PBinaryNode static createBinaryNode(PBinaryNode node)
 {
     int value;
@@ -19,6 +30,11 @@ PBinaryNode static createBinaryNode(PBinaryNode node)
     return node;
 }
 
+/**
+ * 二叉树的前序遍历
+ * @param node
+ * @return
+ */
 int static frontTraversal(PBinaryNode node)
 {
     if(node == NULL) return 0;
@@ -30,6 +46,11 @@ int static frontTraversal(PBinaryNode node)
     }
 }
 
+/**
+ * 二叉树的中序遍历
+ * @param node
+ * @return
+ */
 int static middleTraversal(PBinaryNode node)
 {
     if(node == NULL) return 0;
@@ -41,6 +62,11 @@ int static middleTraversal(PBinaryNode node)
     }
 }
 
+/**
+ * 二叉树的后序遍历
+ * @param node
+ * @return
+ */
 int static behindTraversal(PBinaryNode node)
 {
     if(node == NULL) return 0;
@@ -52,7 +78,7 @@ int static behindTraversal(PBinaryNode node)
     }
 }
 
-int test()
+int testBinary()
 {
     //根节点的指针
     PBinaryNode root;

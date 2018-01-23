@@ -7,6 +7,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/data_structure.dir/LinkQueue.c.obj"
   "CMakeFiles/data_structure.dir/String.c.obj"
   "CMakeFiles/data_structure.dir/BinaryTree.c.obj"
+  "CMakeFiles/data_structure.dir/Graphic.c.obj"
   "data_structure.pdb"
   "data_structure.exe"
   "data_structure.exe.manifest"

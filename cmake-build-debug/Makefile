@@ -149,6 +149,33 @@ BinaryTree.c.s:
 	$(MAKE) -f CMakeFiles\data_structure.dir\build.make CMakeFiles/data_structure.dir/BinaryTree.c.s
 .PHONY : BinaryTree.c.s
 
+Graphic.obj: Graphic.c.obj
+
+.PHONY : Graphic.obj
+
+# target to build an object file
+Graphic.c.obj:
+	$(MAKE) -f CMakeFiles\data_structure.dir\build.make CMakeFiles/data_structure.dir/Graphic.c.obj
+.PHONY : Graphic.c.obj
+
+Graphic.i: Graphic.c.i
+
+.PHONY : Graphic.i
+
+# target to preprocess a source file
+Graphic.c.i:
+	$(MAKE) -f CMakeFiles\data_structure.dir\build.make CMakeFiles/data_structure.dir/Graphic.c.i
+.PHONY : Graphic.c.i
+
+Graphic.s: Graphic.c.s
+
+.PHONY : Graphic.s
+
+# target to generate assembly for a file
+Graphic.c.s:
+	$(MAKE) -f CMakeFiles\data_structure.dir\build.make CMakeFiles/data_structure.dir/Graphic.c.s
+.PHONY : Graphic.c.s
+
 LinkList.obj: LinkList.c.obj
 
 .PHONY : LinkList.obj
@@ -350,6 +377,9 @@ help:
 	@echo ... BinaryTree.obj
 	@echo ... BinaryTree.i
 	@echo ... BinaryTree.s
+	@echo ... Graphic.obj
+	@echo ... Graphic.i
+	@echo ... Graphic.s
 	@echo ... LinkList.obj
 	@echo ... LinkList.i
 	@echo ... LinkList.s

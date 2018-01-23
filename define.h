@@ -79,4 +79,27 @@ typedef struct BinaryTreeNode
     struct BinaryTreeNode *lChild, *rChild;
 }BinaryNode, *PBinaryNode;
 
+//邻接矩阵
+typedef struct
+{
+    //存放顶点元素
+    int vertex[MAX];
+    //存放顶点元素间关系的矩阵
+    int matrix[MAX][MAX];
+    int vertexSize;
+    int lineSize;
+}AdjMatrix, *PAdjMatrix;
+
+typedef struct AdjLinkListNode
+{
+    int data;
+    struct vertexListNode *next;
+}AdjNode, *PAdjNode;
+
+typedef struct
+{
+    AdjNode vertex[MAX];
+    int vertexSize;
+    int lineSize;
+}AdjVertex, *PAdjVertex;
 #endif //DATA_STRUCTURE_DEFINE_H
