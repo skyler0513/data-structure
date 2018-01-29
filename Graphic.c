@@ -63,7 +63,7 @@ int static checkEmpty(PSeqQueue p)
  * 邻接矩阵
  * @return
  */
-PAdjMatrix static createAdjMatrix()
+PAdjMatrix static createAdjMatrix(int flag)
 {
     int i, j;
     PAdjMatrix p = (AdjMatrix *)malloc(sizeof(AdjMatrix));
@@ -77,16 +77,17 @@ PAdjMatrix static createAdjMatrix()
     //初始化矩阵
     for(i = 0; i < p->lineSize; i++){
         for(j = 0; j < p->lineSize; j++)
-            p->matrix[i][j] = 0;
+            if(flag == 0) p->matrix[i][j] = 0;
+            else p->matrix[i][j] = 666666;
     }
 
     //构建矩阵
-    printf("Input the lines\n");
+    printf("Input the lines and power\n");
     for(i = 0; i < p->lineSize; i++) {
-        int start, end;
-        scanf("%d%d", &start, &end);
-        p->matrix[start][end] = 1;
-        p->matrix[end][start] = 1;
+        int start, end, power;
+        scanf("%d%d%d", &start, &end, &power);
+        p->matrix[start][end] = power;
+        //p->matrix[end][start] = 1;
     }
 
     return p;
@@ -144,7 +145,7 @@ int AdjMatrixBFS(int *visits, PAdjMatrix p, PSeqQueue queue)
  */
 int AdjMatrixTraversal()
 {
-    PAdjMatrix p = createAdjMatrix();
+    PAdjMatrix p = createAdjMatrix(0);
 
     int visits[p->vertexSize];
     for(int i = 0; i < p->vertexSize; i++) visits[i] = 0;
@@ -155,6 +156,41 @@ int AdjMatrixTraversal()
     //广度优先，需要借助一个队列
     enQueue(queue, 0);
     AdjMatrixBFS(visits, p, queue);
+}
+
+int prime(PAdjMatrix p)
+{
+    //i和j只用于循环；index用于存储每一次加入元素的位置，previous
+    //用于存储上一次加入元素的位置
+    int i, j, index=0, previous = 0;
+    int lowcost[p->vertexSize],adjVex[p->vertexSize];
+
+    //初始化
+    for(i = 0; i < p->vertexSize; i++){
+        adjVex[i] = 0;
+        lowcost[i] = p->matrix[0][i];
+    }
+
+    printf("The start vertex is %d\n", p->vertex[0]);
+    //每一次循环都会找出一个权值最小的节点
+    for(i = 1; i < p->vertexSize; i++) {
+        int low = 666666;
+        //找出lowcost中最小的那个数
+        for(j = 0; j < p->vertexSize; j++){
+            if(lowcost[j] < low && lowcost[j] != 0) {
+                low = lowcost[j];
+                index = j;
+            }
+        }
+        adjVex[previous] = index;
+        printf("The path is %d%d and the power is %d\n",p->vertex[previous],p->vertex[index],low);
+        previous = index;
+        lowcost[index] = 0;
+        for(j = 0; j < p->vertexSize; j++){
+            if(lowcost[j] > p->matrix[index][j] && lowcost[j] != 0)
+                lowcost[j] = p->matrix[index][j];
+        }
+    }
 }
 /*******************邻接矩阵end***********************/
 
@@ -265,8 +301,10 @@ int adjVertexTraversal()
 }
 
 /*********************邻接表end***********************/
-int testGraphic()
+int main()
 {
     //AdjMatrixTraversal();
-    adjVertexTraversal();
+    //adjVertexTraversal();
+    PAdjMatrix p = createAdjMatrix(1);
+    prime(p);
 }
