@@ -6,6 +6,18 @@
 
 #IncludeRegexTransform: 
 
+D:/phpStudy/WWW/data-structure/BinarySortTree.c
+stdio.h
+-
+stdlib.h
+-
+malloc.h
+-
+string.h
+-
+define.h
+D:/phpStudy/WWW/data-structure/define.h
+
 D:/phpStudy/WWW/data-structure/BinaryTree.c
 stdio.h
 -

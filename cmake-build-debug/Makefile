@@ -122,6 +122,33 @@ data_structure/fast:
 	$(MAKE) -f CMakeFiles\data_structure.dir\build.make CMakeFiles/data_structure.dir/build
 .PHONY : data_structure/fast
 
+BinarySortTree.obj: BinarySortTree.c.obj
+
+.PHONY : BinarySortTree.obj
+
+# target to build an object file
+BinarySortTree.c.obj:
+	$(MAKE) -f CMakeFiles\data_structure.dir\build.make CMakeFiles/data_structure.dir/BinarySortTree.c.obj
+.PHONY : BinarySortTree.c.obj
+
+BinarySortTree.i: BinarySortTree.c.i
+
+.PHONY : BinarySortTree.i
+
+# target to preprocess a source file
+BinarySortTree.c.i:
+	$(MAKE) -f CMakeFiles\data_structure.dir\build.make CMakeFiles/data_structure.dir/BinarySortTree.c.i
+.PHONY : BinarySortTree.c.i
+
+BinarySortTree.s: BinarySortTree.c.s
+
+.PHONY : BinarySortTree.s
+
+# target to generate assembly for a file
+BinarySortTree.c.s:
+	$(MAKE) -f CMakeFiles\data_structure.dir\build.make CMakeFiles/data_structure.dir/BinarySortTree.c.s
+.PHONY : BinarySortTree.c.s
+
 BinaryTree.obj: BinaryTree.c.obj
 
 .PHONY : BinaryTree.obj
@@ -374,6 +401,9 @@ help:
 	@echo ... data_structure
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... BinarySortTree.obj
+	@echo ... BinarySortTree.i
+	@echo ... BinarySortTree.s
 	@echo ... BinaryTree.obj
 	@echo ... BinaryTree.i
 	@echo ... BinaryTree.s

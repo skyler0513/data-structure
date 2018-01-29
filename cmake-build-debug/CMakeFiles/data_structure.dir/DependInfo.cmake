@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "D:/phpStudy/WWW/data-structure/BinarySortTree.c" "D:/phpStudy/WWW/data-structure/cmake-build-debug/CMakeFiles/data_structure.dir/BinarySortTree.c.obj"
   "D:/phpStudy/WWW/data-structure/BinaryTree.c" "D:/phpStudy/WWW/data-structure/cmake-build-debug/CMakeFiles/data_structure.dir/BinaryTree.c.obj"
   "D:/phpStudy/WWW/data-structure/Graphic.c" "D:/phpStudy/WWW/data-structure/cmake-build-debug/CMakeFiles/data_structure.dir/Graphic.c.obj"
   "D:/phpStudy/WWW/data-structure/LinkList.c" "D:/phpStudy/WWW/data-structure/cmake-build-debug/CMakeFiles/data_structure.dir/LinkList.c.obj"

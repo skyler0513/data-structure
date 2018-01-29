@@ -74,6 +74,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="D:/phpStudy/WWW/data-structure/BinarySortTree.c">
+			<Option target="data_structure"/>
+		</Unit>
 		<Unit filename="D:/phpStudy/WWW/data-structure/BinaryTree.c">
 			<Option target="data_structure"/>
 		</Unit>
