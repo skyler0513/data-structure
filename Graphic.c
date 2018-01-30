@@ -301,10 +301,54 @@ int adjVertexTraversal()
 }
 
 /*********************邻接表end***********************/
-int main()
+
+/*********************边集数组start*********************/
+int createEdges(Edge *edge, int size)
+{
+    int i;
+    printf("Input the start, end and power\n");
+    for(i = 0; i < size; i++)
+        scanf("%d%d%d", &edge[i].start, &edge[i].end, &edge[i].power);
+}
+
+int find(int *parents, int point)
+{
+    while (parents[point] != 0){
+        point = parents[point];
+    }
+
+    return point;
+}
+
+/**
+ * 克鲁斯卡尔最小生成树算法
+ */
+int kruskal(Edge *edges, int size)
+{
+    int parent[size];
+    int i, m, n;
+    for(i = 0; i < size; i++) parent[i] = 0;
+    for(i = 0; i < size; i++){
+        m = find(parent, edges[i].start);
+        n = find(parent, edges[i].end);
+        if(m != n) {
+            parent[m] = n;
+            printf("Begin %d, end %d, power %d\n",edges[i].start, edges[i].end, edges[i].power);
+        }
+    }
+}
+
+/*********************边集数组start*********************/
+int testGraphic()
 {
     //AdjMatrixTraversal();
     //adjVertexTraversal();
-    PAdjMatrix p = createAdjMatrix(1);
-    prime(p);
+    /*PAdjMatrix p = createAdjMatrix(1);
+    prime(p);*/
+    int size;
+    printf("Please input the size of edges\n");
+    scanf("%d",&size);
+    Edge edges[size];
+    createEdges(edges, size);
+    kruskal(edges, size);
 }

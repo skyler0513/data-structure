@@ -102,4 +102,11 @@ typedef struct
     int vertexSize;
     int lineSize;
 }AdjVertex, *PAdjVertex;
+
+typedef struct
+{
+    int start;
+    int end;
+    int power;
+}Edge, *PEdge;
 #endif //DATA_STRUCTURE_DEFINE_H
